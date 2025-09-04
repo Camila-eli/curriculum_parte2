@@ -242,4 +242,4 @@ document.addEventListener('DOMContentLoaded', function() {
             document.documentElement.style.setProperty('--border-color', '#2a2a3a');
         }
     });
-});
+});// Última actualización: ju.,  4 de sep. de 2025 15:49:18
