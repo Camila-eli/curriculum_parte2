@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elizabeth Camila Quispe Cabezas - Técnico Superior en Sistemas Informáticos</title>
+    <meta name="description" content="Técnico Superior en Sistemas Informáticos con experiencia en programación, bases de datos y administración de redes. Busco oportunidades para aplicar mis habilidades en un entorno profesional dinámico.">
+    <meta name="keywords" content="Técnico Sistemas Informáticos, Programación, Bases de Datos, Administración de Redes, Desarrollo Web, Oruro, Bolivia">
+    <meta name="author" content="Elizabeth Camila Quispe Cabezas">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Elizabeth Camila Quispe Cabezas",
+        "jobTitle": "Técnico Superior en Sistemas Informáticos",
+        "email": "elizabethcamilaquispe@gmail.com",
+        "telephone": "+591-74093156",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Oruro",
+            "addressCountry": "Bolivia"
+        },
+        "alumniOf": [
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Instituto Técnico Jesús María"
+            },
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Universidad Adventista de Bolivia"
+            }
+        ],
+        "knowsAbout": [
+            "Sistemas Informáticos",
+            "Programación",
+            "Bases de Datos",
+            "Administración de Redes",
+            "Desarrollo Web"
+        ]
+    }
+    </script>
+    <style>
+        /* Estilos específicos para la nueva línea de tiempo académica */
+        .academic-path {
+            position: relative;
+            padding: var(--spacing-xl) 0;
+        }
+
+        .academic-path::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            background: linear-gradient(to bottom, var(--highlight-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        .academic-item {
+            position: relative;
+            margin-bottom: var(--spacing-xl);
+            width: 45%;
+            padding: var(--spacing-lg);
+            background: var(--secondary-color);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--highlight-color);
+        }
+
+        .academic-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            background: var(--accent-color);
+        }
+
+        .academic-item:nth-child(odd) {
+            margin-left: auto;
+        }
+
+        .academic-item:nth-child(even) {
+            margin-right: auto;
+        }
+
+        .academic-item::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--highlight-color);
+            border: 4px solid var(--card-bg);
+            box-shadow: 0 0 0 3px var(--highlight-color);
+        }
+
+        .academic-item:nth-child(odd)::before {
+            left: -10px;
+            transform: translate(-100%, -50%);
+        }
+
+        .academic-item:nth-child(even)::before {
+            right: -10px;
+            transform: translate(100%, -50%);
+        }
+
+        .academic-icon {
+            position: absolute;
+            top: var(--spacing-lg);
+            right: var(--spacing-lg);
+            font-size: 1.8rem;
+            color: var(--highlight-color);
+        }
+
+        .academic-item:nth-child(even) .academic-icon {
+            right: auto;
+            left: var(--spacing-lg);
+        }
+
+        .academic-content {
+            position: relative;
+        }
+
+        .academic-date {
+            display: inline-block;
+            padding: var(--spacing-sm) var(--spacing-md);
+            background: var(--highlight-color);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .academic-institution {
+            color: var(--text-muted);
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .academic-status {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-top: var(--spacing-sm);
+        }
+
+        .status-current {
+            background: rgba(233, 69, 96, 0.2);
+            color: var(--highlight-color);
+            border: 1px solid var(--highlight-color);
+        }
+
+        .status-completed {
+            background: rgba(46, 204, 113, 0.2);
+            color: #2ecc71;
+            border: 1px solid #2ecc71;
+        }
+
+        /* Responsive para la nueva línea de tiempo */
+        @media (max-width: 768px) {
+            .academic-path::before {
+                left: 20px;
+            }
+
+            .academic-item {
+                width: 85%;
+                margin-left: 0 !important;
+                margin-right: auto !important;
+            }
+
+            .academic-item::before {
+                left: -10px !important;
+                right: auto !important;
+                transform: translate(-100%, -50%) !important;
+            }
+
+            .academic-icon {
+                right: var(--spacing-lg) !important;
+                left: auto !important;
+            }
+        }
+
+        /* Estilos para el modo claro */
+        body.light-theme {
+            --text-color: #212529;
+            --text-muted: #6c757d;
+            --background-color: #ffffff;
+            --card-bg: #f8f9fa;
+            --card-hover: #e9ecef;
+            --border-color: #dee2e6;
+            --primary-color: #f8f9fa;
+            --secondary-color: #e9ecef;
+            --accent-color: #dee2e6;
+            --highlight-color: #e94560; /* Mantenemos el color de acento */
+        }
+
+        /* Aseguramos que todos los textos usen la variable de color */
+        body, h1, h2, h3, h4, h5, h6, p, span, a:not(.skill-item, .academic-date) {
+            color: var(--text-color);
+        }
+
+        /* Estilos específicos para elementos que deben mantener contraste */
+        .academic-date, .skill-item {
+            color: white !important;
+        }
+
+        .academic-institution, .date, .language-level span {
+            color: var(--text-muted) !important;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <header role="banner">
+        <div class="container">
+            <div class="profile">
+                <div class="avatar">
+                    <img src="mifoto.png" alt="Elizabeth Camila Quispe Cabezas - Técnico Superior en Sistemas Informáticos" loading="lazy">
+                </div>
+                <div class="personal-info">
+                    <h1>ELIZABETH CAMILA QUISPE CABEZAS</h1>
+                    <p>Técnico Superior en Sistemas Informáticos</p>
+                    <div class="header-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:elizabethcamilaquispe@gmail.com">elizabethcamilaquispe@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-id-card"></i>
+                            <span>CI: 74093156 ORURO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav aria-label="Navegación principal" role="navigation">
+        <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="sr-only">Menú</span>
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+        <ul id="primary-navigation">
+            <li><a href="#perfil"><i class="fas fa-user"></i> Perfil</a></li>
+            <li><a href="#formacion"><i class="fas fa-graduation-cap"></i> Formación</a></li>
+            <li><a href="#experiencia"><i class="fas fa-briefcase"></i> Experiencia</a></li>
+            <li><a href="#certificaciones"><i class="fas fa-certificate"></i> Certificaciones</a></li>
+            <li><a href="#habilidades"><i class="fas fa-code"></i> Habilidades</a></li>
+            <li><a href="#idiomas"><i class="fas fa-language"></i> Idiomas</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content" role="main">
+        <div class="container">
+            <section id="perfil" aria-labelledby="perfil-heading">
+                <h2 id="perfil-heading"><i class="fas fa-user-tie"></i> Perfil Profesional</h2>
+                <div class="section-content">
+                    <p class="profile-summary">
+                        Técnico superior en Sistemas de Información con experiencia en programación y sistemas operativos. 
+                        Comprometido con el cumplimiento de normas, busco oportunidades para aplicar y ampliar mis habilidades 
+                        en un entorno profesional dinámico. Actualmente, complementando mi formación con estudios en 
+                        Telecomunicaciones e Ingeniería de Sistemas para estar al día con las últimas tendencias tecnológicas.
+                    </p>
+                </div>
+            </section>
+
+            <section id="formacion" aria-labelledby="formacion-heading">
+                <h2 id="formacion-heading"><i class="fas fa-graduation-cap"></i> Formación Académica</h2>
+                <div class="section-content">
+                    <div class="academic-path">
+                        <article class="academic-item">
+                            <div class="academic-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="academic-content">
+                                <span class="academic-date"><i class="far fa-calendar-alt"></i> Cursando 5° Semestre</span>
+                                <h3>Carrera de Ingeniería en Sistemas</h3>
+                                <p class="academic-institution"><i class="fas fa-university"></i> Universidad Adventista de Bolivia</p>
+                                <span class="academic-status status-current">En progreso</span>
+                            </div>
+                        </article>
+                        
+                        <article class="academic-item">
+                            <div class="academic-icon">
+                                <i class="fas fa-satellite-dish"></i>
+                            </div>
+                            <div class="academic-content">
+                                <span class="academic-date"><i class="far fa-calendar-alt"></i> Cursando 1° Año</span>
+                                <h3>Carrera en Telecomunicaciones</h3>
+                                <p class="academic-institution"><i class="fas fa-university"></i> Instituto Técnico Jesús María</p>
+                                <span class="academic-status status-current">En progreso</span>
+                            </div>
+                        </article>
+                        
+                        <article class="academic-item">
+                            <div class="academic-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="academic-content">
+                                <span class="academic-date"><i class="far fa-calendar-alt"></i> Titulado, 2023</span>
+                                <h3>Técnico Superior en Sistemas Informáticos</h3>
+                                <p class="academic-institution"><i class="fas fa-university"></i> Instituto Técnico Jesús María</p>
+                                <span class="academic-status status-completed">Completado</span>
+                            </div>
+                        </article>
+                        
+                        <article class="academic-item">
+                            <div class="academic-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="academic-content">
+                                <span class="academic-date"><i class="far fa-calendar-alt"></i> 2014-2020</span>
+                                <h3>Bachiller en Humanidades</h3>
+                                <p class="academic-institution"><i class="fas fa-school"></i> Óscar Únzaga de la Vega 2</p>
+                                <span class="academic-status status-completed">Completado</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experiencia" aria-labelledby="experiencia-heading">
+                <h2 id="experiencia-heading"><i class="fas fa-briefcase"></i> Experiencia Laboral</h2>
+                <div class="section-content">
+                    <article class="experience-item timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Atención al Cliente</h3>
+                            <p class="date"><i class="far fa-calendar-alt"></i> Noviembre 2023 - Actualidad</p>
+                            <p><i class="fas fa-building"></i> Agencia Delizia</p>
+                            <ul>
+                                <li>Proporcioné atención al cliente, resolviendo consultas y garantizando una experiencia satisfactoria.</li>
+                                <li>Colaboré en la gestión de pedidos y en la atención personalizada, mejorando la satisfacción del cliente.</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <article class="experience-item timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Prácticas Profesionales en Sistemas Informáticos</h3>
+                            <p class="date"><i class="far fa-calendar-alt"></i> Nov 2022 - Feb 2023</p>
+                            <p><i class="fas fa-building"></i> Universidad Técnica de Oruro</p>
+                            <ul>
+                                <li>Apoyo en la gestión de estudiantes, atención al público y coordinación de contratos de docentes en diversas facultades.</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="certificaciones" aria-labelledby="certificaciones-heading">
+                <h2 id="certificaciones-heading"><i class="fas fa-certificate"></i> Certificaciones y Cursos</h2>
+                <div class="section-content">
+                    <article class="certification-item timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Taller de evaluación prueba práctica de Desarrollo (Full Stack)</h3>
+                            <p class="date"><i class="far fa-calendar-alt"></i> 2023 - 30 horas</p>
+                            <p><i class="fas fa-award"></i> Instituto Técnico Jesus María</p>
+                        </div>
+                    </article>
+                    
+                    <article class="certification-item timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Taller de Ciclo de conferencias (Aniversario del Instituto Técnico "Jesus Maria")</h3>
+                            <p class="date"><i class="far fa-calendar-alt"></i> 2023 - 40 horas</p>
+                            <p><i class="fas fa-award"></i> Instituto Técnico Jesus María</p>
+                        </div>
+                    </article>
+                    
+                    <article class="certification-item timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Certificado de prácticas laborales</h3>
+                            <p class="date"><i class="far fa-calendar-alt"></i> 2022-2023 - 360 horas</p>
+                            <p><i class="fas fa-award"></i> Facultad Nacional de Ingeniería</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="habilidades" aria-labelledby="habilidades-heading">
+                <h2 id="habilidades-heading"><i class="fas fa-code"></i> Habilidades</h2>
+                <div class="section-content">
+                    <div class="skills-container">
+                        <article class="skill-category">
+                            <h3><i class="fas fa-desktop"></i> Ofimática</h3>
+                            <div class="skills-grid">
+                                <div class="skill-item">Microsoft Word</div>
+                                <div class="skill-item">Microsoft Excel</div>
+                                <div class="skill-item">Microsoft PowerPoint</div>
+                            </div>
+                        </article>
+                        
+                        <article class="skill-category">
+                            <h3><i class="fas fa-database"></i> Bases de Datos</h3>
+                            <div class="skills-grid">
+                                <div class="skill-item">MySQL</div>
+                                <div class="skill-item">SQL Server</div>
+                                <div class="skill-item">PostgreSQL</div>
+                            </div>
+                        </article>
+                        
+                        <article class="skill-category">
+                            <h3><i class="fas fa-network-wired"></i> Administración de Redes</h3>
+                            <div class="skills-grid">
+                                <div class="skill-item">Windows Server</div>
+                                <div class="skill-item">Redes LAN</div>
+                            </div>
+                        </article>
+                        
+                        <article class="skill-category">
+                            <h3><i class="fas fa-laptop-code"></i> Desarrollo Web</h3>
+                            <div class="skills-grid">
+                                <div class="skill-item">HTML</div>
+                                <div class="skill-item">CSS</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="idiomas" aria-labelledby="idiomas-heading">
+                <h2 id="idiomas-heading"><i class="fas fa-language"></i> Idiomas</h2>
+                <div class="section-content">
+                    <div class="languages">
+                        <article class="language-item">
+                            <h3>Español</h3>
+                            <div class="language-level">
+                                <div class="level-bar">
+                                    <div class="level-progress" style="width: 100%"></div>
+                                </div>
+                                <span>Nativo - Nivel Avanzado</span>
+                            </div>
+                        </article>
+                        
+                        <article class="language-item">
+                            <h3>Inglés</h3>
+                            <div class="language-level">
+                                <div class="level-bar">
+                                    <div class="level-progress" style="width: 30%"></div>
+                                </div>
+                                <span>Nivel Básico</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>© 2025 Elizabeth Camila Quispe Cabezas - Todos los derechos reservados</p>
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // script.js - Versión corregida para el cambio de tema
+        document.addEventListener('DOMContentLoaded', function() {
+            // Variables globales
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const primaryNavigation = document.getElementById('primary-navigation');
+            const skipLink = document.querySelector('.skip-link');
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            const skillItems = document.querySelectorAll('.skill-item');
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const avatar = document.querySelector('.avatar');
+            
+            // Inicializar funcionalidades
+            initMobileMenu();
+            initSmoothScrolling();
+            initAnimations();
+            initAccessibilityFeatures();
+            initLazyLoading();
+            initThemeToggle();
+            
+            // Funciones de inicialización
+            function initMobileMenu() {
+                if (!mobileMenuToggle || !primaryNavigation) return;
+                
+                mobileMenuToggle.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    primaryNavigation.classList.toggle('show');
+                    
+                    // Cambiar ícono
+                    const icon = this.querySelector('i');
+                    if (icon) {
+                        if (isExpanded) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        } else {
+                            icon.classList.remove('fa-bars');
+                            icon.classList.add('fa-times');
+                        }
+                    }
+                });
+                
+                // Cerrar menú al hacer clic en un enlace
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+                        primaryNavigation.classList.remove('show');
+                        
+                        // Restaurar ícono de hamburguesa
+                        const icon = mobileMenuToggle.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+            
+            function initSmoothScrolling() {
+                // Smooth scrolling para enlaces internos
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        
+                        const targetId = this.getAttribute('href');
+                        if (targetId === '#') return;
+                        
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            const headerOffset = 80;
+                            const elementPosition = targetElement.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                            
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: 'smooth'
+                            });
+                            
+                            // Enfocar el elemento destino para accesibilidad
+                            setTimeout(() => {
+                                targetElement.setAttribute('tabindex', '-1');
+                                targetElement.focus();
+                            }, 300);
+                        }
+                    });
+                });
+            }
+            
+            function initAnimations() {
+                // Animación de habilidades al hacer hover
+                if (skillItems.length) {
+                    skillItems.forEach(skill => {
+                        skill.addEventListener('mouseenter', function() {
+                            this.style.transform = 'translateY(-5px) scale(1.05)';
+                        });
+                        
+                        skill.addEventListener('mouseleave', function() {
+                            this.style.transform = 'translateY(0) scale(1)';
+                        });
+                    });
+                }
+                
+                // Animación de avatar
+                if (avatar) {
+                    avatar.addEventListener('mouseenter', function() {
+                        this.style.transform = 'scale(1.05) rotate(2deg)';
+                    });
+                    
+                    avatar.addEventListener('mouseleave', function() {
+                        this.style.transform = 'scale(1) rotate(0)';
+                    });
+                }
+                
+                // Animación de scroll para elementos de la línea de tiempo
+                if (timelineItems.length && 'IntersectionObserver' in window) {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.style.opacity = 1;
+                                entry.target.style.transform = 'translateX(0)';
+                            }
+                        });
+                    }, { threshold: 0.1 });
+                    
+                    timelineItems.forEach(item => {
+                        item.style.opacity = 0;
+                        item.style.transform = 'translateX(-20px)';
+                        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                        observer.observe(item);
+                    });
+                }
+            }
+            
+            function initAccessibilityFeatures() {
+                // Mejorar accesibilidad del menú
+                if (mobileMenuToggle) {
+                    mobileMenuToggle.addEventListener('keydown', function(e) {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            this.click();
+                        }
+                    });
+                }
+                
+                // Añadir navegación por teclado en el menú
+                if (navLinks.length) {
+                    navLinks.forEach((link, index) => {
+                        link.addEventListener('keydown', function(e) {
+                            // Navegación con teclas de flecha
+                            if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+                                e.preventDefault();
+                                const nextIndex = (index + 1) % navLinks.length;
+                                navLinks[nextIndex].focus();
+                            } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                                e.preventDefault();
+                                const prevIndex = (index - 1 + navLinks.length) % navLinks.length;
+                                navLinks[prevIndex].focus();
+                            }
+                        });
+                    });
+                }
+                
+                // Añadir funcionalidad al skip link
+                if (skipLink) {
+                    skipLink.addEventListener('click', function() {
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.setAttribute('tabindex', '-1');
+                            target.focus();
+                        }
+                    });
+                }
+            }
+            
+            function initLazyLoading() {
+                // Cargar imágenes de forma diferida si es necesario
+                if ('IntersectionObserver' in window) {
+                    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+                    
+                    if (lazyImages.length) {
+                        const imageObserver = new IntersectionObserver((entries, observer) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    const img = entry.target;
+                                    img.classList.add('loaded');
+                                    imageObserver.unobserve(img);
+                                }
+                            });
+                        });
+                        
+                        lazyImages.forEach(img => {
+                            imageObserver.observe(img);
+                        });
+                    }
+                }
+            }
+            
+            function initThemeToggle() {
+                // Crear botón de cambio de tema
+                const themeToggle = document.createElement('button');
+                themeToggle.setAttribute('aria-label', 'Cambiar entre modo claro y oscuro');
+                themeToggle.classList.add('theme-toggle');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+                themeToggle.style.position = 'fixed';
+                themeToggle.style.bottom = '20px';
+                themeToggle.style.right = '20px';
+                themeToggle.style.zIndex = '1000';
+                themeToggle.style.background = 'var(--highlight-color)';
+                themeToggle.style.color = 'white';
+                themeToggle.style.border = 'none';
+                themeToggle.style.borderRadius = '50%';
+                themeToggle.style.width = '50px';
+                themeToggle.style.height = '50px';
+                themeToggle.style.cursor = 'pointer';
+                themeToggle.style.boxShadow = 'var(--shadow-lg)';
+                
+                document.body.appendChild(themeToggle);
+                
+                // Cambiar entre modos claro y oscuro
+                themeToggle.addEventListener('click', function() {
+                    document.body.classList.toggle('light-theme');
+                    const icon = this.querySelector('i');
+                    
+                    if (document.body.classList.contains('light-theme')) {
+                        icon.classList.remove('fa-moon');
+                        icon.classList.add('fa-sun');
+                    } else {
+                        icon.classList.remove('fa-sun');
+                        icon.classList.add('fa-moon');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
